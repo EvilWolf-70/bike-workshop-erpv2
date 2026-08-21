@@ -1,0 +1,13 @@
+{
+  "name": "bike-workshop-erp",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Bike Workshop ERP - Full Stack MERN Application",
+  "scripts": {
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && npm run dev",
+    "seed": "cd backend && npm run seed",
+    "build:frontend": "cd frontend && npm run build",
+    "install:all": "cd frontend && npm install && cd ../backend && npm install"
+  }
+}

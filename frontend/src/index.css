@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap");
+
+@theme {
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Neutral surface scale */
+  --color-canvas: #F6F7FB;
+  --color-surface: #FFFFFF;
+  --color-border: #E5E8EF;
+  --color-border-strong: #D6DAE3;
+
+  /* Text scale */
+  --color-ink-900: #12141C;
+  --color-ink-700: #333747;
+  --color-ink-500: #656B7C;
+  --color-ink-400: #8990A3;
+
+  /* Brand — steel blue, workshop-tool feel rather than generic SaaS indigo */
+  --color-brand-50: #EEF3FF;
+  --color-brand-100: #DCE7FF;
+  --color-brand-500: #2455E0;
+  --color-brand-600: #1B44C2;
+  --color-brand-700: #16359A;
+
+  /* Amber — used sparingly for alerts / low stock / pending, ties to workshop signage */
+  --color-amber-50: #FFF8EB;
+  --color-amber-500: #E8871E;
+  --color-amber-700: #B35F0A;
+
+  --color-danger-50: #FDECEE;
+  --color-danger-500: #E11D2E;
+  --color-danger-600: #C11424;
+
+  --color-success-50: #EAFBF1;
+  --color-success-500: #16A34A;
+
+  --radius-card: 1rem;
+  --radius-control: 0.625rem;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink-900);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-brand-100);
+}
+
+/* Visible keyboard focus everywhere, no exceptions */
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
